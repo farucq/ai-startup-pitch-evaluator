@@ -1,176 +1,234 @@
-# AI Startup Pitch Evaluator
+# 🚀 AI Startup Pitch Evaluator
 
-An AI-powered system that analyzes startup pitch decks and evaluates their investment readiness.
-The system extracts key business information from uploaded pitch decks and uses LLM reasoning with Retrieval-Augmented Generation (RAG) to generate structured investment insights, risk assessments, and actionable recommendations for founders and investors.
+An **AI-powered system that analyzes startup pitch decks and evaluates their investment readiness**.
 
-## Project Objective
+The system extracts key business insights from uploaded pitch decks and uses **Retrieval-Augmented Generation (RAG)** with a Large Language Model (LLM) to generate:
 
-The goal of this project is to build an intelligent AI tool that can automatically evaluate startup pitch decks and provide insights similar to those produced by venture capital analysts.
+- Market opportunity analysis
+- Business model evaluation
+- Competitive advantage assessment
+- Funding risk assessment
+- Investor readiness scoring
+- Strategic recommendations for founders
 
-The system performs:
+---
 
-Market opportunity analysis
+# 📌 Project Objective
 
-Business model evaluation
+The goal of this project is to build an **AI-driven tool that evaluates startup pitch decks like a venture capital analyst**.
 
-Competitive advantage assessment
+The system automatically analyzes pitch decks and generates structured investor insights including:
 
-Funding risk assessment
+- Market opportunity analysis
+- Business model evaluation
+- Competitive advantage evaluation
+- Funding risk assessment
+- Investor readiness score
+- AI-powered recommendations
 
-Investor readiness scoring
+---
 
-Strategic improvement recommendations
+# 🏗️ System Architecture
 
-System Architecture
+The project uses a **Retrieval-Augmented Generation (RAG)** architecture.
 
-The system follows a Retrieval-Augmented Generation (RAG) architecture.
 
-User Upload Pitch Deck (PDF)
-            │
-            ▼
-     PDF Parsing Module
-            │
-            ▼
-     Text Chunking / Slide Extraction
-            │
-            ▼
-     Embedding Generation
-   (Sentence Transformers)
-            │
-            ▼
-       Vector Database
-         (ChromaDB)
-            │
-            ▼
-      Semantic Retrieval
-            │
-            ▼
-        LLM Reasoning
-         (Groq Llama)
-            │
-            ▼
-     Evaluation Modules
- ├─ Market Opportunity Analyzer
- ├─ Business Model Analyzer
- ├─ Competitive Advantage Evaluator
- └─ Funding Risk Assessment
-            │
-            ▼
-   Investor Readiness Scoring
-            │
-            ▼
-     AI Recommendation Engine
-            │
-            ▼
-     Streamlit Report Output
-Workflow
-1. Pitch Deck Upload
++------------------------------------------------+
+| User Upload Pitch Deck |
+| (PDF) |
++------------------------------------------------+
+│
+▼
++------------------------------------------------+
+| PDF Parsing Module |
+| (PyMuPDF) |
++------------------------------------------------+
+│
+▼
++------------------------------------------------+
+| Text Chunking / Slide Split |
++------------------------------------------------+
+│
+▼
++------------------------------------------------+
+| Embedding Generation |
+| (Sentence Transformers - MiniLM) |
++------------------------------------------------+
+│
+▼
++------------------------------------------------+
+| Vector Database Storage |
+| (ChromaDB) |
++------------------------------------------------+
+│
+▼
++------------------------------------------------+
+| Semantic Retrieval (RAG) |
++------------------------------------------------+
+│
+▼
++------------------------------------------------+
+| LLM Reasoning Engine |
+| (Groq Llama) |
++------------------------------------------------+
+│
+▼
++------------------------------------------------+
+| Evaluation Modules |
+| • Market Opportunity Analyzer |
+| • Business Model Analyzer |
+| • Competitive Advantage Evaluator |
+| • Funding Risk Assessment |
++------------------------------------------------+
+│
+▼
++------------------------------------------------+
+| Investor Readiness Scoring |
++------------------------------------------------+
+│
+▼
++------------------------------------------------+
+| AI Recommendation Generator |
++------------------------------------------------+
+│
+▼
++------------------------------------------------+
+| Streamlit Dashboard Output |
++------------------------------------------------+
 
-The user uploads a startup pitch deck (PDF) using the Streamlit interface.
 
-2. Document Ingestion
+---
 
-The system parses the PDF using PyMuPDF, extracting text from each slide.
+# 🔄 Workflow
 
-The document is divided into logical sections for better analysis.
+## 1️⃣ Pitch Deck Upload
 
-3. Embedding Generation
+The user uploads a **startup pitch deck (PDF)** through the Streamlit interface.
 
-Each section of the pitch deck is converted into vector embeddings using:
+---
+
+## 2️⃣ Document Ingestion
+
+The system parses the PDF using **PyMuPDF**, extracting slide text and preparing it for analysis.
+
+---
+
+## 3️⃣ Text Chunking
+
+The extracted text is segmented into logical sections to improve semantic retrieval.
+
+---
+
+## 4️⃣ Embedding Generation
+
+Each section is converted into vector embeddings using:
+
 
 sentence-transformers/all-MiniLM-L6-v2
 
-These embeddings represent semantic meaning.
 
-4. Vector Database Storage
+These embeddings represent the semantic meaning of the content.
 
-Embeddings are stored in a ChromaDB vector database.
+---
 
-This enables semantic similarity search across pitch deck content.
+## 5️⃣ Vector Database Storage
 
-5. Retrieval-Augmented Generation (RAG)
+Embeddings are stored in **ChromaDB**, which enables semantic similarity search.
 
-When the system performs analysis:
+---
 
-Relevant pitch sections are retrieved from the vector database
+## 6️⃣ Retrieval-Augmented Generation (RAG)
 
-Retrieved context is provided to the LLM
+When analysis is requested:
 
-The LLM generates structured reasoning based on real pitch content
+1. Relevant pitch sections are retrieved from the vector database
+2. Retrieved context is passed to the LLM
+3. The LLM generates structured analysis
 
-6. AI Analysis Modules
+---
 
-The system includes several AI evaluation modules:
+## 7️⃣ AI Evaluation Modules
 
-Market Opportunity Analyzer
+### Market Opportunity Analyzer
 
 Evaluates:
 
-TAM / SAM / SOM
+- TAM / SAM / SOM
+- Market growth potential
+- Scalability signals
 
-Market growth potential
+---
 
-Scalability signals
-
-Business Model Analyzer
+### Business Model Analyzer
 
 Identifies:
 
-Revenue streams
+- Revenue streams
+- Pricing model
+- Customer acquisition strategy
+- Missing business components
 
-Pricing model
+---
 
-Customer acquisition strategy
-
-Missing business model components
-
-Competitive Advantage Evaluator
+### Competitive Advantage Evaluator
 
 Analyzes:
 
-Competitors mentioned in the pitch
+- Competitors mentioned
+- Differentiation strategy
+- Market positioning
 
-Differentiation claims
+---
 
-Strength of market positioning
-
-Funding Risk Assessment Engine
+### Funding Risk Assessment Engine
 
 Detects:
 
-Execution risks
+- Execution risks
+- Market risks
+- Financial risks
 
-Market risks
+And generates a **risk score**.
 
-Financial risks
+---
 
-The module assigns a risk score.
+## 8️⃣ Investor Readiness Scoring
 
-7. Investor Readiness Scoring
+Outputs from all modules are combined using a **weighted scoring system** to produce:
 
-The outputs of all evaluation modules are combined using a weighted scoring system to produce a final score:
 
 Investor Readiness Score (0–100)
-8. AI Recommendation Generator
 
-The system generates recommendations such as:
 
-Missing slide improvements
+---
 
-Investor-facing presentation tips
+## 9️⃣ AI Recommendation Generator
 
-Market validation suggestions
+The system provides improvement suggestions such as:
 
-Technology Stack
-Component	Technology
-Backend	Python
-LLM	Groq Llama
-Framework	LangChain
-Embeddings	HuggingFace Sentence Transformers
-Vector Database	ChromaDB
-PDF Parsing	PyMuPDF
-Frontend	Streamlit
-Project Structure
+- Missing slide information
+- Investor presentation improvements
+- Market validation suggestions
+
+---
+
+# 🧰 Technology Stack
+
+| Component | Technology |
+|--------|--------|
+| Programming Language | Python |
+| LLM | Groq (Llama models) |
+| AI Framework | LangChain |
+| Embeddings | HuggingFace Sentence Transformers |
+| Vector Database | ChromaDB |
+| PDF Parsing | PyMuPDF |
+| UI | Streamlit |
+
+---
+
+# 📂 Project Structure
+
+
 ai-startup-pitch-evaluator
 │
 ├── app.py
@@ -178,39 +236,46 @@ ai-startup-pitch-evaluator
 ├── README.md
 │
 ├── analyzers
-│   ├── market_analyzer.py
-│   ├── business_model.py
-│   ├── competition.py
-│   └── risk_assessment.py
+│ ├── market_analyzer.py
+│ ├── business_model.py
+│ ├── competition.py
+│ └── risk_assessment.py
 │
 ├── embeddings
-│   └── embedder.py
+│ └── embedder.py
 │
 ├── ingestion
-│   └── pdf_parser.py
+│ └── pdf_parser.py
 │
 ├── llm
-│   └── llm_provider.py
+│ └── llm_provider.py
 │
 ├── prompts
-│   └── prompt_templates.py
+│ └── prompt_templates.py
 │
 ├── rag
-│   └── retriever.py
+│ └── retriever.py
 │
 ├── scoring
-│   └── scoring_engine.py
+│ └── scoring_engine.py
 │
 ├── utils
-│   └── report_generator.py
+│ └── report_generator.py
 │
 └── vectorstore
-    └── vectordb.py
-Installation
-1. Clone the Repository
+└── vectordb.py
+
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone Repository
+
+```bash
 git clone https://github.com/farucq/ai-startup-pitch-evaluator.git
 cd ai-startup-pitch-evaluator
-2. Create Virtual Environment
+2️⃣ Create Virtual Environment
 python -m venv venv
 
 Activate:
@@ -222,26 +287,26 @@ venv\Scripts\activate
 Mac/Linux
 
 source venv/bin/activate
-3. Install Dependencies
+3️⃣ Install Dependencies
 pip install -r requirements.txt
-4. Configure Environment Variables
+4️⃣ Configure Environment Variables
 
-Create .env
+Create a .env file:
 
 GROQ_API_KEY=your_api_key_here
-Running the Application
+▶️ Running the Application
 
 Start the Streamlit app:
 
 streamlit run app.py
 
-Open in browser:
+Open the browser:
 
 http://localhost:8501
 
-Upload a pitch deck PDF to start the analysis.
+Upload a pitch deck to start the analysis.
 
-Example Output
+📊 Example Output
 Startup Evaluation Report
 
 Executive Summary
@@ -268,20 +333,27 @@ Recommendations
 • Improve TAM justification
 • Show revenue traction
 • Strengthen competitive moat
-Future Improvements
+🔮 Future Improvements
 
 Possible enhancements include:
 
-Automatic slide classification (Problem, Solution, Market)
+Automatic slide classification (Problem / Solution / Market)
 
-Improved scoring models using LLM evaluation
+Advanced LLM scoring models
 
 Multi-pitch comparison
 
 Investor dashboard analytics
 
-Pitch deck feedback visualization
+Pitch feedback visualization
 
-License
+📜 License
 
-This project is for educational and research purposes.
+This project is intended for educational and research purposes.
+
+
+---
+
+✅ This version is **GitHub-ready and much more professional**.
+
+If you want, I can also give you a **much nicer architecture diagram (SVG/PNG) that renders visually on GitHub**, which makes AI projects look **far more impressive**.
