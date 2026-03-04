@@ -32,70 +32,7 @@ The system automatically analyzes pitch decks and generates structured investor 
 
 The project uses a **Retrieval-Augmented Generation (RAG)** architecture.
 
-```
-+------------------------------------------------+
-| User Upload Pitch Deck |
-| (PDF) |
-+------------------------------------------------+
-│
-▼
-+------------------------------------------------+
-| PDF Parsing Module |
-| (PyMuPDF) |
-+------------------------------------------------+
-│
-▼
-+------------------------------------------------+
-| Text Chunking / Slide Split |
-+------------------------------------------------+
-│
-▼
-+------------------------------------------------+
-| Embedding Generation |
-| (Sentence Transformers - MiniLM) |
-+------------------------------------------------+
-│
-▼
-+------------------------------------------------+
-| Vector Database Storage |
-| (ChromaDB) |
-+------------------------------------------------+
-│
-▼
-+------------------------------------------------+
-| Semantic Retrieval (RAG) |
-+------------------------------------------------+
-│
-▼
-+------------------------------------------------+
-| LLM Reasoning Engine |
-| (Groq Llama) |
-+------------------------------------------------+
-│
-▼
-+------------------------------------------------+
-| Evaluation Modules |
-| • Market Opportunity Analyzer |
-| • Business Model Analyzer |
-| • Competitive Advantage Evaluator |
-| • Funding Risk Assessment |
-+------------------------------------------------+
-│
-▼
-+------------------------------------------------+
-| Investor Readiness Scoring |
-+------------------------------------------------+
-│
-▼
-+------------------------------------------------+
-| AI Recommendation Generator |
-+------------------------------------------------+
-│
-▼
-+------------------------------------------------+
-| Streamlit Dashboard Output |
-+------------------------------------------------+
-```
+
 
 ---
 
@@ -275,7 +212,10 @@ ai-startup-pitch-evaluator
 ```bash
 git clone https://github.com/farucq/ai-startup-pitch-evaluator.git
 cd ai-startup-pitch-evaluator
+```
+
 2️⃣ Create Virtual Environment
+```bash
 python -m venv venv
 
 Activate:
@@ -287,6 +227,7 @@ venv\Scripts\activate
 Mac/Linux
 
 source venv/bin/activate
+```
 3️⃣ Install Dependencies
 pip install -r requirements.txt
 4️⃣ Configure Environment Variables
