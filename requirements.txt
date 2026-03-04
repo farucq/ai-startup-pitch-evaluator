@@ -1,0 +1,11 @@
+streamlit
+langchain
+langchain-community
+langchain-core
+langchain-groq
+chromadb
+sentence-transformers
+pymupdf
+python-dotenv
+pydantic
+tqdm
