@@ -341,20 +341,18 @@ Recommendations
 • Improve TAM justification
 • Show revenue traction
 • Strengthen competitive moat
-Future Improvements
+```
+
+---
+## Future Improvements
 
 Possible enhancements include:
+- Automatic slide classification (Problem / Solution / Market)
+- Advanced LLM scoring models
+- Multi-pitch comparison
+- Investor dashboard analytics
+- Pitch feedback visualization
 
-Automatic slide classification (Problem / Solution / Market)
-
-Advanced LLM scoring models
-
-Multi-pitch comparison
-
-Investor dashboard analytics
-
-Pitch feedback visualization
-```
 
 ## License
 
