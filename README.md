@@ -32,7 +32,7 @@ The system automatically analyzes pitch decks and generates structured investor 
 
 The project uses a **Retrieval-Augmented Generation (RAG)** architecture.
 
-
+```
 +------------------------------------------------+
 | User Upload Pitch Deck |
 | (PDF) |
@@ -95,7 +95,7 @@ The project uses a **Retrieval-Augmented Generation (RAG)** architecture.
 +------------------------------------------------+
 | Streamlit Dashboard Output |
 +------------------------------------------------+
-
+```
 
 ---
 
