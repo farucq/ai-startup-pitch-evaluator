@@ -1,4 +1,4 @@
-# 🚀 AI Startup Pitch Evaluator
+# AI Startup Pitch Evaluator
 
 An **AI-powered system that analyzes startup pitch decks and evaluates their investment readiness**.
 
@@ -13,7 +13,7 @@ The system extracts key business insights from uploaded pitch decks and uses **R
 
 ---
 
-# 📌 Project Objective
+# Project Objective
 
 The goal of this project is to build an **AI-driven tool that evaluates startup pitch decks like a venture capital analyst**.
 
@@ -28,7 +28,7 @@ The system automatically analyzes pitch decks and generates structured investor 
 
 ---
 
-# 🏗️ System Architecture
+# System Architecture
 
 The project uses a **Retrieval-Augmented Generation (RAG)** architecture.
 
@@ -36,27 +36,27 @@ The project uses a **Retrieval-Augmented Generation (RAG)** architecture.
 
 ---
 
-# 🔄 Workflow
+# Workflow
 
-## 1️⃣ Pitch Deck Upload
+## 1️.Pitch Deck Upload
 
 The user uploads a **startup pitch deck (PDF)** through the Streamlit interface.
 
 ---
 
-## 2️⃣ Document Ingestion
+## 2️.Document Ingestion
 
 The system parses the PDF using **PyMuPDF**, extracting slide text and preparing it for analysis.
 
 ---
 
-## 3️⃣ Text Chunking
+## 3️.Text Chunking
 
 The extracted text is segmented into logical sections to improve semantic retrieval.
 
 ---
 
-## 4️⃣ Embedding Generation
+## 4️.Embedding Generation
 
 Each section is converted into vector embeddings using:
 
@@ -68,13 +68,13 @@ These embeddings represent the semantic meaning of the content.
 
 ---
 
-## 5️⃣ Vector Database Storage
+## 5️.Vector Database Storage
 
 Embeddings are stored in **ChromaDB**, which enables semantic similarity search.
 
 ---
 
-## 6️⃣ Retrieval-Augmented Generation (RAG)
+## 6️.Retrieval-Augmented Generation (RAG)
 
 When analysis is requested:
 
@@ -84,7 +84,7 @@ When analysis is requested:
 
 ---
 
-## 7️⃣ AI Evaluation Modules
+## 7️.AI Evaluation Modules
 
 ### Market Opportunity Analyzer
 
@@ -129,7 +129,7 @@ And generates a **risk score**.
 
 ---
 
-## 8️⃣ Investor Readiness Scoring
+## 8️.Investor Readiness Scoring
 
 Outputs from all modules are combined using a **weighted scoring system** to produce:
 
@@ -139,7 +139,7 @@ Investor Readiness Score (0–100)
 
 ---
 
-## 9️⃣ AI Recommendation Generator
+## 9️.AI Recommendation Generator
 
 The system provides improvement suggestions such as:
 
@@ -149,7 +149,7 @@ The system provides improvement suggestions such as:
 
 ---
 
-# 🧰 Technology Stack
+# Technology Stack
 
 | Component | Technology |
 |--------|--------|
@@ -163,9 +163,9 @@ The system provides improvement suggestions such as:
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
-
+```bash
 ai-startup-pitch-evaluator
 │
 ├── app.py
@@ -201,20 +201,20 @@ ai-startup-pitch-evaluator
 │
 └── vectorstore
 └── vectordb.py
-
+```
 
 ---
 
 # ⚙️ Installation
 
-## 1️⃣ Clone Repository
+## 1️.Clone Repository
 
 ```bash
 git clone https://github.com/farucq/ai-startup-pitch-evaluator.git
 cd ai-startup-pitch-evaluator
 ```
 
-2️⃣ Create Virtual Environment
+## 2️.Create Virtual Environment
 ```bash
 python -m venv venv
 
@@ -228,17 +228,17 @@ Mac/Linux
 
 source venv/bin/activate
 ```
-3️⃣ Install Dependencies
+## 3️.Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
-4️⃣ Configure Environment Variables
+## 4️.Configure Environment Variables
 ```bash
 Create a .env file:
 
 GROQ_API_KEY=your_api_key_here
 ```
-▶️ Running the Application
+Running the Application
 
 Start the Streamlit app:
 ```bash
@@ -250,7 +250,7 @@ http://localhost:8501
 ```
 Upload a pitch deck to start the analysis.
 
-📊 Example Output
+### Example Output
 ```bash
 Startup Evaluation Report
 
@@ -278,7 +278,7 @@ Recommendations
 • Improve TAM justification
 • Show revenue traction
 • Strengthen competitive moat
-🔮 Future Improvements
+Future Improvements
 
 Possible enhancements include:
 
@@ -293,13 +293,7 @@ Investor dashboard analytics
 Pitch feedback visualization
 ```
 
-📜 License
+## License
 
 This project is intended for educational and research purposes.
 
-
----
-
-✅ This version is **GitHub-ready and much more professional**.
-
-If you want, I can also give you a **much nicer architecture diagram (SVG/PNG) that renders visually on GitHub**, which makes AI projects look **far more impressive**.
