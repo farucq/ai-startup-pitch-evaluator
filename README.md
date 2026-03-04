@@ -1,9 +1,9 @@
-AI Startup Pitch Evaluator
+# AI Startup Pitch Evaluator
 
 An AI-powered system that analyzes startup pitch decks and evaluates their investment readiness.
 The system extracts key business information from uploaded pitch decks and uses LLM reasoning with Retrieval-Augmented Generation (RAG) to generate structured investment insights, risk assessments, and actionable recommendations for founders and investors.
 
-Project Objective
+## Project Objective
 
 The goal of this project is to build an intelligent AI tool that can automatically evaluate startup pitch decks and provide insights similar to those produced by venture capital analysts.
 
