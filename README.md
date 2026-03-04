@@ -229,25 +229,29 @@ Mac/Linux
 source venv/bin/activate
 ```
 3️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 4️⃣ Configure Environment Variables
-
+```bash
 Create a .env file:
 
 GROQ_API_KEY=your_api_key_here
+```
 ▶️ Running the Application
 
 Start the Streamlit app:
-
+```bash
 streamlit run app.py
-
+```
 Open the browser:
-
+```bash
 http://localhost:8501
-
+```
 Upload a pitch deck to start the analysis.
 
 📊 Example Output
+```bash
 Startup Evaluation Report
 
 Executive Summary
@@ -287,6 +291,7 @@ Multi-pitch comparison
 Investor dashboard analytics
 
 Pitch feedback visualization
+```
 
 📜 License
 
