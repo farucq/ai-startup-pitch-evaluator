@@ -268,7 +268,7 @@ ai-startup-pitch-evaluator
 
 ---
 
-# ⚙️ Installation
+# Installation
 
 ## 1️.Clone Repository
 
